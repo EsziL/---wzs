@@ -1,0 +1,80 @@
+$text: #ffffff;
+$background: #080815;
+$primary: #1c10ff;
+$secondary: #ffffff;
+$accent: #bbbBff;
+
+
+.login {
+	color: $accent;
+    font-family: 'poppins';
+    background: rgba(255,255,255, 0.1);
+    border-radius: 20px;
+    padding: 5px 10px 20px 20px;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    transition: opacity 0.5s;
+
+    input{
+        border: 0;
+        background: #04040a;
+        color: white;
+        font-family: 'poppins';
+        outline: 0;
+        border-radius: 7.5px;
+        height: 3vh;
+        font-size: 1em;
+        width: 15vw;
+        &[type="submit"] {
+            margin-top: 2.5vh;
+            width: 10vw;
+            height: 4vh;
+        }
+    }
+
+
+
+    box-icon {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 34.5vh;
+        left: 63.75vw;
+        cursor: pointer;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.logincenter {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    backdrop-filter: blur(10px);
+    transition: opacity 0.25s;
+}
+
+body, html{ 
+    height: 100%;
+    margin: 0;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 0;
+}

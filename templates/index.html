@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+</head> 
+<body>   
+    <div class="bar">
+        <span>Home</span>
+        <span>Home</span>
+        <span>Home</span>
+        <span>Home</span>
+		<span id="login">Login</span>
+    </div>
+		<div class="intro">
+			<span data-content="There are some problems">
+				There are some problems
+			</span>
+			<span data-content="Shazam can't fix.">
+				Shazam can't fix.
+			</span>
+			<!--svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 600 600"><path d="M294.8953205528087 502.61778890399705C244.10998119733995 503.9266878297783 193.3246418418712 372.25131093768846 194.3717609824962 314.1361299684502C195.4188801231212 256.0209489992119 250.39269604108995 155.23560201434861 301.1780353965587 153.92670308856736C351.96337475202745 152.61780416278611 500.1309162559337 248.1675554445244 499.0837971153087 306.2827364137627C498.0366779746837 364.39791738300096 345.68065990827745 501.3088899782158 294.8953205528087 502.61778890399705C244.10998119733995 503.9266878297783 193.3246418418712 372.25131093768846 194.3717609824962 314.1361299684502 " fill="url(&quot;#SvgjsLinearGradient1000&quot;)" transform="matrix(1.0603073792140916,0.010633818091261238,-0.7159417409251211,0.9359425627110383,167.38999416808213,-10.929253781119883)"></path><defs><linearGradient id="SvgjsLinearGradient1000"><stop stop-color="hsl(265, 55%, 30%)" offset="0"></stop><stop stop-color="hsl(265, 55%, 60%)" offset="1"></stop></linearGradient></defs></svg -->			
+				<button class="upload">
+				<!-- box-icon name='plus-circle' color="#bbbBff"></box-icon -->
+					Upload a sample!
+			</button>
+		</div>
+		<div class="center">
+			<iframe src="/login" style="visibility: hidden;" id="loginiframe"></iframe>
+		</div>
+		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+		<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
