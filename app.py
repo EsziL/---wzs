@@ -33,6 +33,29 @@ def login():
 
     return render_template('login.html')
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        hashed_password = generate_password_hash(password)  # Hash the password
+
+        # Check if username already exists
+        cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
+        existing_user = cursor.fetchone()
+        if existing_user:
+            return 'Username already exists. Please choose another username.'
+        
+        # Insert new user into the database
+        cursor.execute("INSERT INTO users (username, password) VALUES (%s, %s)", (username, hashed_password))
+        db.commit()
+
+        session['logged_in'] = True
+        session['username'] = username
+        return redirect('/profile')
+
+    return render_template('register.html')
+
 @app.route('/profile')
 def profile():
     if 'logged_in' in session:
