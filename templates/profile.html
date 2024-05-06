@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
 </head> 
-<body>   
+<body text="white">   
     <div class="bar">
         <span href="/">Home</span>
         <span href="/lostwave">Lostwave</span>
@@ -16,9 +16,14 @@
         <span>Home</span>
 		<span id="login">Login</span>
     </div>
-    <div class="center">
-        <iframe src="/login" style="visibility: hidden;" id="loginiframe"></iframe>
-    </div>
+	<div class="center">
+        <span class="parse">Hello, !{user}!</span>
+
+
+		<iframe src="/login" style="visibility: hidden;" id="loginiframe"></iframe>
+	</div>
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	<script src="{{ url_for('static', filename='js/global.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
 </body>
 </html>
