@@ -25,7 +25,7 @@ function main() {
   const spans = document.querySelectorAll("span");
   spans.forEach((i)=>{
     i.addEventListener("click", ()=>{
-      window.location.href = i.getAttribute("href");
+      if (i.getAttribute("id") !== "login") window.location.href = i.getAttribute("href");
     });
   })
 }

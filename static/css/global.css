@@ -1,0 +1,48 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  background: #080815;
+  z-index: -100;
+}
+
+.bar {
+  width: 100%;
+  height: 6vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0));
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.bar span {
+  cursor: pointer;
+  transition: background 0.25s; /* Added transition property here */
+  font-size: 1vw;
+  height: 6vh;
+  width: 8vw;
+  color: #bbbBff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  border-radius: 15px;
+}
+.bar span:hover {
+  background: rgba(255, 255, 255, 0.1019607843);
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center iframe {
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  border: 0;
+}/*# sourceMappingURL=global.css.map */

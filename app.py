@@ -15,6 +15,10 @@ cursor = db.cursor()
 def index():
     return render_template('index.html')
 
+@app.route('/lostwave')
+def lostwave():
+    return render_template("lostwave.html")
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -35,7 +39,7 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    if session['logged_in'] == True:
+    if 'logged_in' in session and session['logged_in']:
         return redirect('/profile')
     if request.method == 'POST':
         username = request.form['username']
