@@ -35,6 +35,8 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    if session['logged_in'] == True:
+        return redirect('/profile')
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']

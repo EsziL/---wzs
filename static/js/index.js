@@ -21,6 +21,13 @@ function main() {
     // iframe.style.opacity = "100%";
     logindiv.style.opacity = "100%";
   });
+
+  const spans = document.querySelectorAll("span");
+  spans.forEach((i)=>{
+    i.addEventListener("click", ()=>{
+      window.location.href = i.getAttribute("href");
+    });
+  })
 }
 
 
